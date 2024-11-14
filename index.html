@@ -12,172 +12,13 @@
     href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
   <title>Frontend Mentor | Intro component with sign up form</title>
-
-  <style>
-    body {
-      font-family: 'Poppins', 'Fira Code', sans-serif;
-      background-image: url('./images/bg-intro-desktop.png');
-      background-size: cover;
-      background-position: center;
-      background-color: hsl(0, 100%, 70%);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      padding-left: 30vh;
-      padding-right: 30vh;
-      font-size: 20px;
-    }
-
-    @media (max-width: 768px) {
-      body {
-        background-image: url('./images/bg-intro-mobile.png');
-      }
-
-      main {
-        flex-direction: column;
-        padding-left: 5vh;
-        padding-right: 5vh;
-      }
-    }
-
-    main {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .content {
-      color: white;
-      padding-right: 7vh;
-      width: 50vh;
-    }
-
-    .form .ad {
-      background-color: hsl(248, 32%, 40%);
-      font-size: 14px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 6vh;
-      border-radius: 1vh;
-      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-      color: white;
-      margin-bottom: 2.5vh;
-    }
-
-    .form form {
-      background-color: white;
-      height: 60vh;
-      width: 55vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      border-radius: 1vh;
-      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-    }
-
-    .form input {
-      margin-top: 1vh;
-      margin-bottom: 1vh;
-      width: 80%;
-      height: 10%;
-      padding-left: 3%;
-      border-radius: 1vh;
-      border-color: hsl(249, 10%, 50%, 0.2);
-      font-size: 16px;
-    }
-
-    .form input:focus {
-      border-color: hsl(0, 100%, 70%);
-      border-width: 3px;
-      outline: none;
-    }
-
-    .form span {
-      align-self: end;
-      margin-top: 0.25vh;
-      margin-right: 5vh;
-      color: hsl(0, 100%, 70%);
-      font-size: 10px;
-    }
-
-    .form button {
-      margin-top: 1vh;
-      width: 85%;
-      height: 12%;
-      border-radius: 1vh;
-      font-size: 14px;
-      color: white;
-      background-color: hsl(154, 59%, 50%);
-    }
-
-    .form button:hover {
-      cursor: pointer;
-      background-color: hsl(154, 59%, 70%);
-    }
-
-    .form p {
-      font-size: 11px;
-      color: hsl(249, 10%, 75%);
-    }
-
-    .form a {
-      color: hsl(0, 100%, 70%);
-    }
-
-    .form a:hover {
-      cursor: pointer;
-      text-decoration: underline;
-    }
-
-    .form input.invalid {
-      border-color: hsl(0, 100%, 70%);
-      background-image: url('./images/icon-error.svg');
-      background-repeat: no-repeat;
-      background-position: right 10px center;
-      background-size: 25px;
-      padding-right: 40px;
-    }
-
-    footer {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-    }
-
-    .attribution {
-      font-size: 14px;
-      text-align: center;
-      color: white;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 70%);
-    }
-
-    .attribution a:hover {
-      font-size: 14px;
-      color: hsl(228, 45%, 50%);
-    }
-
-    .error-message {
-      color: red;
-      font-size: 12px;
-      margin-top: 0.5vh;
-      display: block;
-    }
-  </style>
+  <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
   <main>
     <div class="content">
       <h1>Learn to code by watching others</h1>
-
       <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
         but understanding how developers think is invaluable.</p>
     </div>
@@ -200,33 +41,7 @@
     </div>
   </main>
 
-  <script>
-    const form = document.querySelector('form');
-    const inputs = form.querySelectorAll('input');
-
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      inputs.forEach(input => {
-        const errorMessage = input.nextElementSibling;
-        if (input.type === 'email') {
-          if (!input.value.includes('@') || !input.value.includes('.')) {
-            errorMessage.textContent = 'Looks like this is not an email';
-            input.classList.add('invalid');
-          } else {
-            errorMessage.textContent = '';
-            input.classList.remove('invalid');
-          }
-        } else if (input.value === '') {
-          errorMessage.textContent = `${input.placeholder} cannot be empty`;
-          input.classList.add('invalid');
-        } else {
-          errorMessage.textContent = '';
-          input.classList.remove('invalid');
-        }
-      });
-    });
-  </script>
+  <script src="./script.js"></script>
 
   <footer>
     <p class="attribution">

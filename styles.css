@@ -1,0 +1,222 @@
+body {
+  font-family: "Poppins", "Fira Code", sans-serif;
+  background-image: url("./images/bg-intro-desktop.png");
+  background-size: cover;
+  background-position: center;
+  background-color: hsl(0, 100%, 74%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding-left: 30vh;
+  padding-right: 30vh;
+  font-size: 20px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  color: white;
+  padding-right: 5vh;
+  width: 55vh;
+  font-size: 25px;
+  line-height: 1.2;
+}
+
+.content p {
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.form {
+  width: 60vh;
+}
+
+.form .ad {
+  background-color: hsl(248, 32%, 40%);
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6vh;
+  border-radius: 1vh;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  color: white;
+  margin-bottom: 2.5vh;
+}
+
+.form form {
+  background-color: white;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1vh;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form form.invalid {
+  height: 55vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+.form input {
+  margin-top: 1vh;
+  margin-bottom: 0.25vh;
+  width: 85%;
+  height: 11%;
+  padding-left: 3%;
+  border-radius: 0.5vh;
+  border-color: hsl(249, 10%, 50%, 0.2);
+  font-size: 16px;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.form input:focus {
+  border-color: hsl(0, 100%, 74%);
+  border-width: 2px;
+  outline: none;
+}
+
+.form .error-message {
+  align-self: end;
+  margin-bottom: 1vh;
+  margin-right: 5vh;
+  color: hsl(0, 100%, 74%);
+  font-size: 10px;
+  font-style: italic;
+}
+
+.form input.invalid {
+  border-color: hsl(0, 100%, 74%);
+  background-image: url("./images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 25px;
+  padding-right: 40px;
+}
+
+.form button {
+  margin-top: 1vh;
+  width: 85%;
+  height: 12%;
+  border-radius: 1vh;
+  font-size: 14px;
+  color: white;
+  background-color: hsl(154, 59%, 51%);
+}
+
+.form button:hover {
+  cursor: pointer;
+  background-color: hsl(154, 59%, 70%);
+}
+
+.form p {
+  margin-top: 2vh;
+  font-size: 11px;
+  color: hsl(249, 10%, 75%);
+}
+
+.form a {
+  color: hsl(0, 100%, 74%);
+}
+
+.form a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  color: white;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 70%);
+}
+
+.attribution a:hover {
+  font-size: 14px;
+  color: hsl(228, 45%, 50%);
+}
+
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3vh;
+    background-image: url("./images/bg-intro-mobile.png");
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .content {
+    padding-right: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .content p {
+    font-size: 14px;
+  }
+
+  .form {
+    width: 100%;
+    margin-bottom: 5vh;
+  }
+
+  .form .ad {
+    padding: 0;
+  }
+
+  .form form {
+    width: 100%;
+    text-align: center;
+  }
+
+  .form form.invalid {
+    height: 60vh;
+  }
+
+  .form input {
+    width: 34vh;
+  }
+
+  .form p {
+    padding-left: 5vh;
+    padding-right: 5vh;
+  }
+
+  .attribution {
+    font-size: 12px;
+  }
+
+  footer {
+    position: relative;
+    width: 100%;
+  }
+}
