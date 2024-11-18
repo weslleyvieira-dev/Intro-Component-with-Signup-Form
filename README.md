@@ -16,7 +16,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot](./Screenshot.png)
+![Screenshot - PC](./Screenshot%20-%20PC.png)
 
 ### Links
 

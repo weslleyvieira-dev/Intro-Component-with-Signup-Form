@@ -18,10 +18,12 @@ form.addEventListener("submit", (e) => {
       } else {
         errorMessage.textContent = "";
         input.classList.remove("invalid");
+        form.classList.remove("invalid");
       }
     } else {
       errorMessage.textContent = "";
       input.classList.remove("invalid");
+      form.classList.remove("invalid");
     }
   });
 });
